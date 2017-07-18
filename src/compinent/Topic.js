@@ -47,7 +47,7 @@ class Topic extends React.Component{
 		.catch(err=>message.error("提交失败"))
 	}
 	handReply(reply){
-		
+
 		this.setState({visible:true, replyin:reply, reply:`@${reply.author.loginname} `})
 	}
 	handlelike(reply_id){
@@ -65,7 +65,7 @@ class Topic extends React.Component{
 		let {data,comment,reply,visible,replyin} = this.state
 		console.log(data)
 		return(
-				<div style={{padding:"10px"}}>
+				<div>
 				<Card loading={!data}>
 			   	{
 			   		data?(
@@ -95,7 +95,7 @@ class Topic extends React.Component{
 												</span>
 											</div>
 										<div dangerouslySetInnerHTML={{__html:item.content}}/>
-									
+
 									</div>
 								</div>
 
@@ -105,7 +105,7 @@ class Topic extends React.Component{
 				</div>
 
 			   			):null
-			   	} 
+			   	}
 			  </Card>
 						 <Modal
 			          title={replyin?`回复：${replyin.author.loginname}`:'回复：'}
@@ -116,7 +116,7 @@ class Topic extends React.Component{
 			    <Input type="textarea" rows={4}  value={reply} onChange={e=>this.setState({reply:e.target.value})}
 						ref={input=>this.input=input}
 			  />
-			   
+
 			        </Modal>
 				</div>
 

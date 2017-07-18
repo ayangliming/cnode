@@ -12,7 +12,7 @@
 }
 .topics_wrap{
 	padding: 0 10px;
-	
+
 }
 .topics_main{
 	display: flex;
@@ -64,17 +64,29 @@
 }
 .comment{
 	display: flex;
+	width: 100%;
+	overflow: hidden;
+	margin-top: 10px;
+}
+.comment pre{
+	overflow-x: auto;
+}
+.comment pre code{
+	overflow-x: auto;
+	width: 100%;
 }
 .comment>span{
 	flex-shrink: 0;
 	margin-right: 10px;
 }
 .comment_header{
-	flex-grow: 1
+	flex-grow: 1;
+	width: 85%;
 }
 .comment_right{
 	display: flex;
 	justify-content: space-between;
+	max-width: 100%
 }
 .comment_right span{
 	margin-right: 10px;
@@ -117,7 +129,7 @@
 }
 .wrap>div{
 	background-color: #fff;
-	width: 70%;
+	width: 100%;
 	margin: 0 auto;
 }
 .wrap>div>p{
@@ -129,4 +141,7 @@
 .wrap_Select{
 	margin-bottom: 5px;
 	padding-left: 10px;
+}
+.markdown-text img{
+	width: 100%;
 }
