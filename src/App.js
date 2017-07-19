@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter, Route} from 'react-router-dom'
+import { HashRouter, Route} from 'react-router-dom'
 
 import Header from "./compinent/Header.js"
 // import Footer from "./compinent/Footer.js"
@@ -17,7 +17,7 @@ class App extends React.Component{
 	}
 	render(){
 		return(
-			<BrowserRouter>
+			<HashRouter>
 				<div>
 					<Header />
 					<Route  path='/' exact component={Home} />
@@ -27,7 +27,7 @@ class App extends React.Component{
 					<Route path='/topics' component={Topics} />
 					<Route path='/collect' component={Collect} />
 				</div>
-			</BrowserRouter>
+			</HashRouter>
 			)
 	}
 }
