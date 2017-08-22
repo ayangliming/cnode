@@ -62,13 +62,13 @@ class Header extends React.Component{
 				    <Menu.Item>
 				       <Link to={{pathname:`/user/${user.loginname}`,state:user.loginname}}>
 				       个人中心
-				       </Link> 
+				       </Link>
 				    </Menu.Item>
 				     <Menu.Item>
 				  	<Link to="/message">消息中心</Link>
 				    </Menu.Item>
 				    <Menu.Item>
-				   	<Link to="/topics">发布话题</Link>	
+				   	<Link to="/topics">发布话题</Link>
 				    </Menu.Item>
 				    <Menu.Item>
 				   <Button type="danger" onClick={this.handlout.bind(this)}>退出</Button>
@@ -79,11 +79,11 @@ class Header extends React.Component{
 						<header className="header">
 						<h3><Link to="/">CnOde</Link></h3>
 			{isLogin?
-				<Dropdown overlay={menu}>
-					<Badge count={messageof}>
+				<Dropdown overlay={menu} trigger={['click']}>
+					<Badge count={messageof} className="badge">
 					<Avatar src={user.avatar_url}/>
 					</Badge>
-			
+
 				 </Dropdown>
 							:
 						<div>
@@ -102,7 +102,7 @@ class Header extends React.Component{
 		    </div>
 		  }
 		  <BackTop />
-	</header>	
+	</header>
 
 
 			)
